@@ -24,4 +24,24 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+//app.MapControllerRoute(
+//    name: "Login",
+//    pattern: "Auth/{controller=Auth}/{action=Login}/{id?}");
+
+//app.MapControllerRoute(
+//    name: "ForgotPassword",
+//    pattern: "Auth/{controller=Auth}/{action=ForgotPassword}/{id?}");
+
+//app.MapControllerRoute(
+//    name: "Register",
+//    pattern: "Auth/{controller=Auth}/{action=Register}/{id?}");
+
+app.MapControllerRoute(
+    name: "PageDetail",
+    pattern: "PageDetail/{controller=Page}/{action=Detail}/{id?}");
+
+app.MapControllerRoute(
+    name: "BlogDetail",
+    pattern: "BlogDetail/{controller=Blog}/{action=Detail}/{id?}");
+
 app.Run();
