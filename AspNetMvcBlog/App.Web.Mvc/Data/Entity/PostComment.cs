@@ -6,7 +6,6 @@ namespace App.Web.Mvc.Data.Entity
 {
     public class PostComment
     {
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

@@ -21,9 +21,7 @@ namespace App.Web.Mvc.Data.Entity
         [StringLength(1000, ErrorMessage = "{0} {1} karakterden fazla olamaz!")]
         [MinLength(10, ErrorMessage = "{0} en az {1} karakter olabilir!")]
         public string PostContext { get; set; }
-
         public List<CategoryPost> CategoryPosts { get; set; }
-
         public int UserId { get; set; }
         public User User { get; set; }
     }
