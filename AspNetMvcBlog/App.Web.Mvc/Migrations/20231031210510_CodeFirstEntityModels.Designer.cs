@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace App.Web.Mvc.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231031210516_1001_FirstMigration")]
-    partial class _1001_FirstMigration
+    [Migration("20231031210510_CodeFirstEntityModels")]
+    partial class CodeFirstEntityModels
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -232,20 +232,20 @@ namespace App.Web.Mvc.Migrations
                         new
                         {
                             Id = 1,
-                            UserEmail = "ozoz12@gmail.com",
-                            UserName = "Ozge",
-                            UserNick = "ozoz",
-                            UserPassword = "1234",
-                            UserSurname = "Ozyurt"
+                            UserEmail = "oguzkagan@xyz.com",
+                            UserName = "Oğuzkağan",
+                            UserNick = "Ogz",
+                            UserPassword = "123456",
+                            UserSurname = "Fındık"
                         },
                         new
                         {
                             Id = 2,
-                            UserEmail = "cemh@hotmail.com",
-                            UserName = "Cem",
-                            UserNick = "Cemo",
-                            UserPassword = "cem123",
-                            UserSurname = "Hos"
+                            UserEmail = "sebnem@xyz.com",
+                            UserName = "Sebnem",
+                            UserNick = "Sebo",
+                            UserPassword = "123456",
+                            UserSurname = "Ferah"
                         });
                 });
 

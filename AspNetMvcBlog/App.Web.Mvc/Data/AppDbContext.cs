@@ -37,6 +37,6 @@ namespace App.Web.Mvc.Data
         public DbSet<Page> Page { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Setting> Setting { get; set; }
+
     }
 }
-

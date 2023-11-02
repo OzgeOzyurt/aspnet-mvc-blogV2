@@ -8,9 +8,11 @@ namespace App.Web.Mvc.Controllers
         {
             return View();
         }
+
         public IActionResult Detail(int id)
         {
             return View();
         }
+
     }
 }

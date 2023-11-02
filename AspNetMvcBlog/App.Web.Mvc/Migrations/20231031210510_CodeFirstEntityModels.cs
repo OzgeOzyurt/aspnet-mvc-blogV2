@@ -7,7 +7,7 @@
 namespace App.Web.Mvc.Migrations
 {
     /// <inheritdoc />
-    public partial class _1001_FirstMigration : Migration
+    public partial class CodeFirstEntityModels : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -173,8 +173,8 @@ namespace App.Web.Mvc.Migrations
                 columns: new[] { "Id", "UserEmail", "UserName", "UserNick", "UserPassword", "UserSurname" },
                 values: new object[,]
                 {
-                    { 1, "ozoz12@gmail.com", "Ozge", "ozoz", "1234", "Ozyurt" },
-                    { 2, "cemh@hotmail.com", "Cem", "Cemo", "cem123", "Hos" }
+                    { 1, "oguzkagan@xyz.com", "Oğuzkağan", "Ogz", "123456", "Fındık" },
+                    { 2, "sebnem@xyz.com", "Sebnem", "Sebo", "123456", "Ferah" }
                 });
 
             migrationBuilder.InsertData(

@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace App.Web.Mvc.Data.Entity
 {
@@ -12,11 +12,11 @@ namespace App.Web.Mvc.Data.Entity
 
         [Required(ErrorMessage = "{0} boş geçilemez.")]
         [DisplayName("Kategori Adı")]
-        [StringLength(40, ErrorMessage = "{0} {1} karakterden fazla olamaz!")]
-        [MinLength(3, ErrorMessage = "{0} en az {1} karakter olabilir!")]
+        [StringLength(40, ErrorMessage ="{0} {1} karakterden fazla olamaz!")]
+        [MinLength(10, ErrorMessage ="{0} en az {1} karakter olabilir!")]
+
         public string CategoryName { get; set; }
 
-        public List<CategoryPost>? CategoryPosts { get; set; }
-
+        public List<CategoryPost> CategoryPosts { get; set; }
     }
 }
