@@ -1,7 +1,6 @@
-using App.Business.AutoMapper;
+using App.Business;
+using App.Business.Services;
 using App.Business.Services.Abstract;
-using App.Business.Services.Concrete;
-using App.Persistence;
 using App.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,13 +13,14 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 
 builder.Services.AddSession(options =>
 {
-	options.Cookie.Name = ".Genel.Session";
-	options.IdleTimeout = TimeSpan.FromSeconds(120);
-	options.Cookie.HttpOnly = true;
-	options.Cookie.IsEssential = true;
+    options.Cookie.Name = ".Genel.Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(120);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 
 }
 );
+
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<IPostService, PostService>();
@@ -40,9 +40,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-	app.UseExceptionHandler("/Home/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-	app.UseHsts();
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -55,8 +55,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 //app.MapControllerRoute(
 //    name: "Login",
@@ -71,13 +71,22 @@ app.MapControllerRoute(
 //    pattern: "Auth/{controller=Auth}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-	name: "PageDetail",
-	pattern: "PageDetail/{controller=Page}/{action=Detail}/{id?}");
+    name: "PageDetail",
+    pattern: "PageDetail/{controller=Page}/{action=Detail}/{id?}");
 
 app.MapControllerRoute(
-	name: "BlogDetail",
-	pattern: "BlogDetail/{controller=Blog}/{action=Detail}/{id?}");
+    name: "BlogDetail",
+    pattern: "BlogDetail/{controller=Blog}/{action=Detail}/{id?}");
 
+//app.MapControllerRoute(
+//    name: "admin",
+//    pattern: "admin/{controller=Home}/{action=Index}/{id?}",
+//    defaults: new { area = "Admin" }
+//);
+
+app.MapControllerRoute(
+    name: "MyArea",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 
 app.Run();
