@@ -1,4 +1,4 @@
-﻿using App.Persistence;
+﻿using App.Persistence.Data;
 using App.Persistence.Data.Entity;
 using App.Persistence.DTOs;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -8,7 +8,7 @@ using System.Text.Json;
 
 namespace App.Web.Mvc.Controllers
 {
-	public class AuthController : Controller
+    public class AuthController : Controller
     {
         private readonly AppDbContext appDbContext;
 
@@ -135,4 +135,3 @@ namespace App.Web.Mvc.Controllers
 
     }
 }
-
