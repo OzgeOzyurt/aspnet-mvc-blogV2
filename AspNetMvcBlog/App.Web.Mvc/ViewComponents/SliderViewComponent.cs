@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using App.Web.Mvc.Models;
-using App.Web.Mvc.Data;
+using App.Persistence.Models;
+using App.Persistence.Data;
 
 namespace App.Web.Mvc.ViewComponents
 {

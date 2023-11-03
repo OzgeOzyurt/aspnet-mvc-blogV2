@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace App.Web.Mvc.Migrations
+namespace App.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class _1001 : Migration
@@ -174,7 +174,7 @@ namespace App.Web.Mvc.Migrations
                 columns: new[] { "Id", "UserEmail", "UserName", "UserPassword", "UserSurname" },
                 values: new object[,]
                 {
-                    { 1, "Teo@xyz.com", "Teoman", "123456", "Yakupoğlu" },
+                    { 1, "teo@xyz.com", "Teoman", "123456", "Yakupoğlu" },
                     { 2, "sebnem@xyz.com", "Sebnem", "123456", "Ferah" }
                 });
 
