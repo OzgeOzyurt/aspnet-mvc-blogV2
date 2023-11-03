@@ -1,5 +1,5 @@
-﻿using App.Web.Mvc.Data.Entity;
-using App.Web.Mvc.Models;
+﻿using App.Persistence.Data.Entity;
+using App.Persistence.Models;
 using Microsoft.EntityFrameworkCore;
 
 public class DbSeeder

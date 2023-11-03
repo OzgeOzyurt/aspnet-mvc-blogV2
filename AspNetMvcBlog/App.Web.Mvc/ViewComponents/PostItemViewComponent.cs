@@ -1,5 +1,5 @@
 ﻿using App.Web.Mvc.Controllers;
-using App.Web.Mvc.Data;
+using App.Persistence;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.Web.Mvc.ViewComponents
